@@ -1,0 +1,63 @@
+      body {
+            font-family: 'EB Garamond', 'Sarabun', serif;
+            background-color: #fcfbf9; /* Classic paper background */
+            color: #1a1a1a;
+        }
+        
+        .code-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* Retro arXiv Classic Border & Accent */
+        .arxiv-header-border {
+            border-bottom: 2px solid #800000;
+        }
+
+        .arxiv-box {
+            border: 1px solid #c8c8c8;
+            background-color: #ffffff;
+        }
+
+        .arxiv-link {
+            color: #0000ee;
+            text-decoration: underline;
+        }
+        .arxiv-link:hover {
+            color: #b30000;
+        }
+
+        .arxiv-tag {
+            background-color: #f0f0ed;
+            border: 1px solid #d0d0cc;
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* Latex style math formula look */
+        .math-symbol {
+            font-style: italic;
+            font-family: 'EB Garamond', serif;
+        }
+
+        /* Scrollbar retro styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #aaa;
+            border-radius: 2px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #800000;
+        }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; }
+            .arxiv-box { border: none; }
+        }
