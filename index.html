@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarayut Angkoh – Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Fira+Code:wght@400;500&family=Sarabun:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design.css">
+</head>
+<body class="min-h-screen text-gray-900 leading-relaxed px-2 sm:px-4 py-4 max-w-7xl mx-auto">
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="arxiv-header-border pb-3 mb-6">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+            <div class="flex items-center space-x-3">
+                <span class="text-3xl font-bold tracking-tight text-[#800000] font-serif">Sarayut A.</span>
+                <span class="text-xs code-font text-gray-600 border-l border-gray-400 pl-3">
+                    <strong class="text-black">2026.10001v1</strong> [cs.HC / cs.SE] 7 Oct 2026
+                </span>
+            </div>
+            <div class="flex items-center space-x-2 text-xs code-font no-print">
+                <button onclick="window.print()" class="arxiv-box px-3 py-1 hover:bg-gray-100 flex items-center gap-1 shadow-sm">
+                    <i class="fa-solid fa-print text-gray-600"></i> Print PDF
+                </button>
+                <button onclick="toggleBibTeXModal('cite-author')" class="arxiv-box px-3 py-1 hover:bg-gray-100 flex items-center gap-1 shadow-sm">
+                    <i class="fa-solid fa-quote-right text-gray-600"></i> Cite (BibTeX)
+                </button>
+                <a href="#contact" class="bg-[#800000] text-white px-3 py-1 hover:bg-red-900 flex items-center gap-1 shadow-sm">
+                    <i class="fa-solid fa-envelope"></i> Contact
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-4 text-center border-t border-b border-gray-300 py-4 bg-[#f7f6f2]">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 font-serif">
+                Web Tools, Learning Systems and Student Projects
+            </h1>
+            <p class="text-base sm:text-lg italic text-gray-700 mt-1">
+                Portfolio of Selected Works, Research Projects and Activity Archives
+            </p>
+            <div class="mt-2 text-sm text-gray-800 font-medium">
+                <span class="font-bold underline decoration-dotted">Sarayut Angkoh (ต้นกล้า)</span><sup>1*</sup>
+            </div>
+            <div class="text-xs text-gray-600 mt-1 code-font">
+                <sup>1</sup>Nongphai School
+            </div>
+        </div>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- ==================== LEFT COLUMN ==================== -->
+        <aside class="lg:col-span-3 space-y-6 order-2 lg:order-1 sticky-side">
+
+            <div class="arxiv-box p-4">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-[#800000] border-b border-gray-300 pb-1 mb-3 code-font">
+                    <i class="fa-solid fa-list-ol mr-1"></i> Index / Outline
+                </h3>
+                <nav id="outline" class="space-y-1.5 text-sm">
+                    <a href="#abstract" class="block arxiv-link">§ Abstract (About)</a>
+                    <a href="#skills" class="block arxiv-link">§ 1. Technical Stack</a>
+                    <a href="#research" class="block arxiv-link">§ 2. Research Project (โครงงาน)</a>
+                    <a href="#projects" class="block arxiv-link">§ 3. Web Projects</a>
+                    <a href="#certificates" class="block arxiv-link">§ 4. Certificates</a>
+                    <a href="#archives" class="block arxiv-link">§ 5. Archives (กิจกรรม)</a>
+                    <a href="#education" class="block arxiv-link">§ 6. Education</a>
+                    <a href="#contact" class="block arxiv-link">§ 7. Contact</a>
+                </nav>
+            </div>
+
+            <div class="arxiv-box p-4 text-xs space-y-2">
+                <h3 class="font-bold text-gray-800 border-b border-gray-300 pb-1 code-font uppercase">Subjects &amp; Metrics</h3>
+                <p><strong>Primary:</strong> Web Development (cs.SE)</p>
+                <p><strong>Secondary:</strong> Human-Computer Interaction (cs.HC), Education Tech</p>
+                <div class="pt-2 border-t border-gray-200 mt-2 space-y-1">
+                    <div class="flex justify-between"><span class="text-gray-600">Web Projects:</span><span class="code-font font-semibold">7</span></div>
+                    <div class="flex justify-between"><span class="text-gray-600">Research Projects:</span><span class="code-font font-semibold">1</span></div>
+                    <div class="flex justify-between"><span class="text-gray-600">Certificates:</span><span class="code-font font-semibold">14</span></div>
+                </div>
+                <p class="section-note pt-1">* ตัวเลขแก้ได้ตามจริง</p>
+            </div>
+
+            <div class="arxiv-box p-4 space-y-2 text-sm">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-[#800000] border-b border-gray-300 pb-1 mb-3 code-font">
+                    <i class="fa-solid fa-link mr-1"></i> Repositories
+                </h3>
+                <ul class="space-y-2 text-xs code-font">
+                    <li><a href="https://github.com/tonkl7" target="_blank" rel="noopener" class="arxiv-link flex items-center gap-2"><i class="fa-brands fa-github text-base text-gray-800"></i> github.com/tonkl7</a></li>
+                    <li><a href="https://github.com/sarayutangkohh" target="_blank" rel="noopener" class="arxiv-link flex items-center gap-2"><i class="fa-brands fa-github text-base text-gray-800"></i> github.com/sarayutangkohh</a></li>
+                    <li><a href="https://www.kaggle.com/superbananaa" target="_blank" rel="noopener" class="arxiv-link flex items-center gap-2"><i class="fa-brands fa-kaggle text-base text-sky-600"></i> kaggle.com/superbananaa</a></li>
+                    <li><a href="https://huggingface.co/Tonkla2" target="_blank" rel="noopener" class="arxiv-link flex items-center gap-2"><span class="text-base leading-none" aria-hidden="true">🤗</span> huggingface.co/Tonkla2</a></li>
+                    <li><a href="mailto:sarayutangkoh@gmail.com" class="arxiv-link flex items-center gap-2"><i class="fa-solid fa-envelope text-base text-red-700"></i> sarayutangkoh@gmail.com</a></li>
+                </ul>
+                <p class="section-note">* ลิงก์ GitHub เดาจากชื่อเว็ป โปรดตรวจแก้</p>
+            </div>
+
+            <div class="border border-dashed border-gray-400 p-3 text-xs bg-[#f4f3ee] text-gray-700">
+                <p class="font-semibold mb-1"><i class="fa-solid fa-circle-info mr-1"></i> Note to Readers:</p>
+                <p class="leading-snug">ผลงานทุกชิ้นเปิดใช้งานได้จริงบนเบราว์เซอร์ ไม่ต้องติดตั้งอะไรเพิ่ม</p>
+            </div>
+        </aside>
+
+        <!-- ==================== MIDDLE COLUMN ==================== -->
+        <section class="lg:col-span-6 space-y-10 order-1 lg:order-2">
+
+            <!-- Abstract -->
+            <article id="abstract" class="arxiv-box p-5 relative">
+                <span class="absolute -top-3 left-4 bg-white px-2 text-xs font-bold uppercase tracking-widest text-[#800000] border border-gray-300 code-font">Abstract</span>
+                <p class="text-base leading-relaxed text-justify mt-2">
+                    นักเรียนโรงเรียนหนองไผ่ผู้สนใจการพัฒนาเว็ปไซต์และเครื่องมือที่ช่วยให้การเรียนและการเขียนโค้ดง่ายขึ้น
+                    ผลงานที่ผ่านมาครอบคลุมตั้งแต่ <strong>เครื่องมือสำหรับนักพัฒนา</strong> เกม และ
+                    <strong>ระบบช่วยวางแผนการทบทวนความรู้</strong> ที่อิงเส้นโค้งการลืม
+                    เอกสารฉบับนี้รวบรวมโครงงาน เว็ปที่พัฒนา เกียรติบัตร และภาพกิจกรรมไว้ในที่เดียว
+                </p>
+                <div class="mt-4 pt-3 border-t border-gray-200 text-xs code-font text-gray-600 flex flex-wrap gap-2">
+                    <span class="font-bold text-gray-800">Keywords:</span>
+                    <span class="arxiv-tag">HTML/CSS/JS</span>
+                    <span class="arxiv-tag">Web Tools</span>
+                    <span class="arxiv-tag">Spaced Repetition</span>
+                    <span class="arxiv-tag">Game Physics</span>
+                </div>
+            </article>
+
+            <!-- 1. Skills -->
+            <article id="skills" class="space-y-3">
+                <h2 class="text-xl font-bold border-b-2 border-gray-800 pb-1 font-serif flex justify-between items-baseline">
+                    <span>1. Technical Foundations &amp; Tooling</span>
+                    <span class="text-xs font-normal code-font text-gray-500">[Sec. 1.0]</span>
+                </h2>
+                <p class="section-note">สกิลที่เห็นจากผลงานจริงในหน้านี้ เพิ่มหรือลบได้ตามต้องการ</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                    <div class="arxiv-box p-3">
+                        <h4 class="font-bold text-[#800000] code-font text-xs uppercase mb-2">Front-end</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-800">
+                            <li>HTML5, CSS3, JavaScript</li>
+                            <li>Responsive layout, Dark mode</li>
+                            <li>Canvas / game loop</li>
+                        </ul>
+                    </div>
+                    <div class="arxiv-box p-3">
+                        <h4 class="font-bold text-[#800000] code-font text-xs uppercase mb-2">Data &amp; Storage</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-800">
+                            <li>localStorage</li>
+                            <li>Google Sheets + Apps Script</li>
+                            <li>JSON, Base64, Hash</li>
+                        </ul>
+                    </div>
+                    <div class="arxiv-box p-3">
+                        <h4 class="font-bold text-[#800000] code-font text-xs uppercase mb-2">Math &amp; Modeling</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-800">
+                            <li>Forgetting curve (R = e<sup>−t/S</sup>)</li>
+                            <li>Spaced-repetition scheduling</li>
+                            <li>Basic game physics</li>
+                        </ul>
+                    </div>
+                    <div class="arxiv-box p-3">
+                        <h4 class="font-bold text-[#800000] code-font text-xs uppercase mb-2">Workflow</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-800">
+                            <li>Git / GitHub Pages</li>
+                            <li>Version-based releases (fixed V.x)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2. Research Project (โครงงาน) -->
+            <article id="research" class="space-y-4">
+                <h2 class="text-xl font-bold border-b-2 border-gray-800 pb-1 font-serif flex justify-between items-baseline">
+                    <span>2. Research Project (โครงงาน)</span>
+                    <span class="text-xs font-normal code-font text-gray-500">[Sec. 2.0]</span>
+                </h2>
+
+                <div class="arxiv-box p-4 space-y-2 border-l-4 border-l-[#800000]">
+                    <div class="flex justify-between items-start gap-2">
+                        <h3 class="font-bold text-lg text-gray-900 leading-snug">
+                            [Project-1] SproutS: ระบบวิเคราะห์และวางแผนการทบทวนความรู้
+                        </h3>
+                        <span class="arxiv-tag whitespace-nowrap">v2.7</span>
+                    </div>
+                    <p class="text-xs code-font text-gray-600"><strong>Author:</strong> S. Angkoh</p>
+                    <p class="text-sm text-gray-800 text-justify">
+                        เว็ปแอปที่ช่วยบอกว่าควรทบทวนวิชาไหนเมื่อไหร่ โดยคำนวณความจำที่เหลือ (R) จากความแข็งแรงของความจำ (S)
+                        ด้วยสูตร <span class="math-symbol">R = e<sup>−t/S</sup></span> แล้วแนะนำให้ทบทวนที่จุด R = 85%
+                        ผู้ใช้ประเมินความจำ 4 ระดับ (ซ้ำอีกครั้ง / ยาก / ปานกลาง / ง่าย) และเลือกวิธีทบทวน (อ่าน หรือทำข้อสอบ) เพื่อปรับค่า S
+                    </p>
+                    <ul class="list-disc list-inside text-sm text-gray-800 space-y-1">
+                        <li>ปฏิทินบันทึกการทบทวนและกราฟเส้นโค้งการลืมแบบเลือกช่วงเวลาได้</li>
+                        <li>ตั้งเป้าหมาย เช่น วันสอบ แล้วระบบวางแผนจำนวนครั้งและวันที่ควรทบทวน</li>
+                        <li>ตารางสีคาดการณ์ความจำล่วงหน้าถึง 365 วัน</li>
+                        <li>คู่มือสูตรและที่มาของตัวเลขพร้อมอ้างอิงงานวิจัย (Ebbinghaus, Roediger &amp; Karpicke, Cepeda และคณะ)</li>
+                    </ul>
+                    <div class="pt-2 flex flex-wrap justify-between items-center text-xs code-font gap-2 border-t border-gray-200">
+                        <div class="space-x-1">
+                            <span class="arxiv-tag">Spaced Repetition</span>
+                            <span class="arxiv-tag">Forgetting Curve</span>
+                            <span class="arxiv-tag">JavaScript</span>
+                        </div>
+                        <div class="space-x-3">
+                            <a href="https://sarayutangkohh.github.io/sps/#home" target="_blank" rel="noopener" class="arxiv-link"><i class="fa-solid fa-laptop-code"></i> Live Demo</a>
+                            <button onclick="toggleBibTeXModal('sprouts')" class="arxiv-link text-gray-700"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="section-note">เพิ่มโครงงานอื่นได้โดยคัดลอกกล่อง [Project-1] ไปวางต่อ</p>
+            </article>
+
+            <!-- 3. Web Projects -->
+            <article id="projects" class="space-y-4">
+                <h2 class="text-xl font-bold border-b-2 border-gray-800 pb-1 font-serif flex justify-between items-baseline">
+                    <span>3. Selected Web Projects</span>
+                    <span class="text-xs font-normal code-font text-gray-500">[Sec. 3.0]</span>
+                </h2>
+                <p class="section-note">คำอธิบายด้านล่างเขียนจากสิ่งที่เห็นเมื่อเปิดแต่ละเว็ป แก้ให้ตรงกับที่ตั้งใจได้เลย</p>
+
+                <!-- Web 1: Code Space -->
+                <div class="arxiv-box p-4 space-y-2">
+                    <div class="flex justify-between items-start gap-2">
+                        <h3 class="font-bold text-lg text-gray-900 leading-snug">[Web-1] Tonkla's Code Space</h3>
+                        <span class="arxiv-tag whitespace-nowrap">fixed V.5</span>
+                    </div>
+                    <p class="text-sm text-gray-800 text-justify">
+                        พื้นที่เขียนและดูโค้ดส่วนตัวบนเบราว์เซอร์ มีโหมดเขียนโค้ด ดูงานเก่า และ Template พร้อมช่อง Preview แสดงผลทันที
+                        บันทึกงานเป็นรายการที่ค้นหาได้จากชื่อและ ID มีโหมดมืด และรหัสปลดล็อกสิทธิ์พิเศษสำหรับเจ้าของ
+                    </p>
+                    <div class="pt-2 flex flex-wrap justify-between items-center text-xs code-font gap-2 border-t border-gray-200">
+                        <div class="space-x-1"><span class="arxiv-tag">Code Editor</span><span class="arxiv-tag">Live Preview</span></div>
+                        <div class="space-x-3">
+                            <a href="https://tonkl7.github.io/webpt/code/V1/webhub-fixed-v6.html" target="_blank" rel="noopener" class="arxiv-link"><i class="fa-solid fa-laptop-code"></i> Live Demo</a>
+                            <button onclick="toggleBibTeXModal('codespace')" class="arxiv-link text-gray-700"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web 2: StudyVault -->
+                <div class="arxiv-box p-4 space-y-2">
+                    <div class="flex justify-between items-start gap-2">
+                        <h3 class="font-bold text-lg text-gray-900 leading-snug">[Web-2] StudyVault Pro</h3>
+                        <span class="arxiv-tag whitespace-nowrap">Pro</span>
+                    </div>
+                    <p class="text-sm text-gray-800 text-justify">
+                        เครื่องมือสำหรับการเรียน (ชื่อบนหน้าเว็ปคือ "StudyVault Pro – By Tonkla")
+                        <span class="section-note">[ผมอ่านเนื้อหาในหน้านี้ไม่ได้เพราะแสดงผลด้วย JavaScript โปรดเติมคำอธิบายฟีเจอร์เอง]</span>
+                    </p>
+                    <div class="pt-2 flex flex-wrap justify-between items-center text-xs code-font gap-2 border-t border-gray-200">
+                        <div class="space-x-1"><span class="arxiv-tag">Study Tool</span></div>
+                        <div class="space-x-3">
+                            <a href="https://tonkl7.github.io/webpt/tools/studyvault.html" target="_blank" rel="noopener" class="arxiv-link"><i class="fa-solid fa-laptop-code"></i> Live Demo</a>
+                            <button onclick="toggleBibTeXModal('studyvault')" class="arxiv-link text-gray-700"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web 3: Dev Tools -->
+                <div class="arxiv-box p-4 space-y-2">
+                    <div class="flex justify-between items-start gap-2">
+                        <h3 class="font-bold text-lg text-gray-900 leading-snug">[Web-3] Dev Tools: Frontend &amp; UI/UX Hub</h3>
+                    </div>
+                    <p class="text-sm text-gray-800 text-justify">
+                        ชุดเครื่องมือสำหรับออกแบบหน้าเว็ป ได้แก่ ตัวเลือกสีและแนะนำพาเลตต์ (HEX / RGB / HSL), ตัวสร้าง Gradient,
+                        ตัวทดลองฟอนต์ภาษาไทยและอังกฤษ, ตัวปรับเงา (Shadow), ตัวตั้งค่า Grid และพื้นที่จัดเลย์เอาต์ พร้อมปุ่มคัดลอก CSS
+                        ส่วน UX Checklist อยู่ระหว่างปรับปรุง
+                    </p>
+                    <div class="pt-2 flex flex-wrap justify-between items-center text-xs code-font gap-2 border-t border-gray-200">
+                        <div class="space-x-1"><span class="arxiv-tag">Color</span><span class="arxiv-tag">Gradient</span><span class="arxiv-tag">Typography</span><span class="arxiv-tag">CSS Grid</span></div>
+                        <div class="space-x-3">
+                            <a href="https://tonkl7.github.io/webpt/tools/Devtools.html" target="_blank" rel="noopener" class="arxiv-link"><i class="fa-solid fa-laptop-code"></i> Live Demo</a>
+                            <button onclick="toggleBibTeXModal('devtools')" class="arxiv-link text-gray-700"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web 4: Translater -->
+                <div class="arxiv-box p-4 space-y-2">
+                    <div class="flex justify-between items-start gap-2">
+                        <h3 class="font-bold text-lg text-gray-900 leading-snug">[Web-4] Translater &amp; Developer Toolkit</h3>
+                        <span class="arxiv-tag whitespace-nowrap">v3.6 Pro</span>
+                    </div>
+                    <p class="text-sm text-gray-800 text-justify">
+                        รวมเครื่องมือขนาดเล็ก 8 อย่างไว้ในหน้าเดียว: แปลภาษา (ตรวจจับภาษาอัตโนมัติ, สูงสุด 5,000 ตัวอักษร),
+                        สร้างและตรวจรหัสผ่าน, แก้ข้อความที่พิมพ์ผิดแป้นภาษาไทย/อังกฤษ, จัดรูปแบบ JSON, Base64,
+                        สร้าง Hash ของไฟล์ (MD5, SHA-1, SHA-256, SHA-512), แปลงไฟล์เป็น Base64, แปลงเลขฐาน และ URL/HTML Encode
+                    </p>
+                    <div class="pt-2 flex flex-wrap justify-between items-center text-xs code-font gap-2 border-t border-gray-200">
+                        <div class="space-x-1"><span class="arxiv-tag">Translator</span><span class="arxiv-tag">JSON</span><span class="arxiv-tag">Hash</span></div>
+                        <div class="space-x-3">
+                            <a href="https://tonkl7.github.io/webpt/tools/translater.html" target="_blank" rel="noopener" class="arxiv-link"><i class="fa-solid fa-laptop-code"></i> Live Demo</a>
+                            <button onclick="toggleBibTeXModal('translater')" class="arxiv-link text-gray-700"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web 5: Ball Fight -->
+                <div class="arxiv-box p-4 space-y-2">
+                    <div class="flex justify-between items-start gap-2">
+                        <h3 class="font-bold text-lg text-gray-900 leading-snug">[Web-5] Ball Fight</h3>
+                        <span class="arxiv-tag whitespace-nowrap">beta V8</span>
+                    </div>
+                    <p class="text-sm text-gray-800 text-justify">
+                        เกมต่อสู้ด้วยลูกบอลที่เล่นได้ 2 โหมด คือ 1v1 Duel และ Boss Raid
+                        มีหน้าตั้งค่าฟิสิกส์ของเกม เช่น ขนาดสนาม ความเร็ว แรงชน การเด้งกำแพง แรงเสียดทาน
+                        เวลาอมตะหลังโดนโจมตี (i-Frame) และการหยุดค้างตอนชน (Hit-Stop)
+                    </p>
+                    <div class="pt-2 flex flex-wrap justify-between items-center text-xs code-font gap-2 border-t border-gray-200">
+                        <div class="space-x-1"><span class="arxiv-tag">Game</span><span class="arxiv-tag">Physics</span><span class="arxiv-tag">Canvas</span></div>
+                        <div class="space-x-3">
+                            <a href="https://tonkl7.github.io/games/ballfightBETA6O.html" target="_blank" rel="noopener" class="arxiv-link"><i class="fa-solid fa-laptop-code"></i> Live Demo</a>
+                            <button onclick="toggleBibTeXModal('ballfight')" class="arxiv-link text-gray-700"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web 6: StickRoute -->
+                <div class="arxiv-box p-4 space-y-2">
+                    <div class="flex justify-between items-start gap-2">
+                        <h3 class="font-bold text-lg text-gray-900 leading-snug">[Web-6] StickRoute</h3>
+                        <span class="arxiv-tag whitespace-nowrap">v1.0</span>
+                    </div>
+                    <p class="text-sm text-gray-800 text-justify">
+                        ที่เก็บบุ๊กมาร์กลิงก์ของตัวเอง เพิ่มลิงก์พร้อมชื่อและแท็ก ปักดาวให้ขึ้นบนสุด และลบได้
+                        เก็บข้อมูลในเบราว์เซอร์ (localStorage) หรือเชื่อมกับ Google Sheets ผ่าน Apps Script
+                        โดยมีคู่มือและโค้ดสำหรับตั้งค่าอยู่ในหน้าเว็ป
+                    </p>
+                    <div class="pt-2 flex flex-wrap justify-between items-center text-xs code-font gap-2 border-t border-gray-200">
+                        <div class="space-x-1"><span class="arxiv-tag">Bookmarks</span><span class="arxiv-tag">Google Sheets</span><span class="arxiv-tag">Apps Script</span></div>
+                        <div class="space-x-3">
+                            <a href="https://tonkl7.github.io/sroute/web.html" target="_blank" rel="noopener" class="arxiv-link"><i class="fa-solid fa-laptop-code"></i> Live Demo</a>
+                            <button onclick="toggleBibTeXModal('stickroute')" class="arxiv-link text-gray-700"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web 7: BranchStorage -->
+                <div class="arxiv-box p-4 space-y-2">
+                    <div class="flex justify-between items-start gap-2">
+                        <h3 class="font-bold text-lg text-gray-900 leading-snug">[Web-7] BranchStorage</h3>
+                    </div>
+                    <p class="text-sm text-gray-800 text-justify">
+                        <span class="section-note">[ลิงก์ที่ให้มา (…/code/V1/wtefrr9dz) เปิดแล้วขึ้น 404 ผมเลยยังไม่ทราบว่าเว็ปนี้ทำอะไร โปรดตรวจลิงก์และเติมคำอธิบาย]</span>
+                    </p>
+                    <div class="pt-2 flex flex-wrap justify-between items-center text-xs code-font gap-2 border-t border-gray-200">
+                        <div class="space-x-1"><span class="arxiv-tag">Storage</span></div>
+                        <div class="space-x-3">
+                            <a href="https://tonkl7.github.io/webpt/code/V1/wtefrr9dz" target="_blank" rel="noopener" class="arxiv-link"><i class="fa-solid fa-laptop-code"></i> Live Demo</a>
+                            <button onclick="toggleBibTeXModal('branchstorage')" class="arxiv-link text-gray-700"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 4. Certificates -->
+            <article id="certificates" class="space-y-6">
+                <h2 class="text-xl font-bold border-b-2 border-gray-800 pb-1 font-serif flex justify-between items-baseline">
+                    <span>4. Certificates (เกียรติบัตร)</span>
+                    <span class="text-xs font-normal code-font text-gray-500">[Sec. 4.0]</span>
+                </h2>
+                <p class="section-note">คลิกที่รูปเพื่อขยายดู (กด Esc หรือคลิกพื้นที่ว่างเพื่อปิด)</p>
+
+                <!-- 4.1 กิจกรรมที่โดดเด่น -->
+                <div id="certificates-featured" class="space-y-2">
+                    <h3 class="font-bold text-base font-serif text-[#800000] flex items-center gap-2">
+                        <i class="fa-solid fa-trophy text-sm"></i> 4.1 กิจกรรมที่โดดเด่น
+                        <span class="code-font text-xs font-normal text-gray-500">(Featured)</span>
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/featured/hacka-competition.jpg','DarunHackathon 2026 — เข้าร่วมโครงการอบรมและการแข่งขัน หัวข้อ Decentralization (23–25 มี.ค. 2569)')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: DarunHackathon 2026">
+                                <img src="assets/featured/hacka-competition.jpg" alt="DarunHackathon 2026" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. A1]</span>
+                                <strong>DarunHackathon 2026</strong><br><span class="text-gray-600">เข้าร่วมโครงการอบรมและการแข่งขัน หัวข้อ Decentralization (23–25 มี.ค. 2569)</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/featured/science-day-quiz.jpg','สัปดาห์วิทยาศาสตร์แห่งชาติ ส่วนภูมิภาค 2568 — แข่งขันตอบปัญหาวิทยาศาสตร์คอมพิวเตอร์และเขียนโปรแกรม ระดับ ม.ปลาย (ม.ราชภัฏเพชรบูรณ์)')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: สัปดาห์วิทยาศาสตร์แห่งชาติ ส่วนภูมิภาค 2568">
+                                <img src="assets/featured/science-day-quiz.jpg" alt="สัปดาห์วิทยาศาสตร์แห่งชาติ ส่วนภูมิภาค 2568" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. A2]</span>
+                                <strong>สัปดาห์วิทยาศาสตร์แห่งชาติ ส่วนภูมิภาค 2568</strong><br><span class="text-gray-600">แข่งขันตอบปัญหาวิทยาศาสตร์คอมพิวเตอร์และเขียนโปรแกรม ระดับ ม.ปลาย (ม.ราชภัฏเพชรบูรณ์)</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/featured/honor-academic.jpg','วันเชิดชูเกียรติ ปีการศึกษา 2567 — รางวัลด้านวิชาการ ประเภทผลการเรียน ระดับดีเด่น')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: วันเชิดชูเกียรติ ปีการศึกษา 2567">
+                                <img src="assets/featured/honor-academic.jpg" alt="วันเชิดชูเกียรติ ปีการศึกษา 2567" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. A3]</span>
+                                <strong>วันเชิดชูเกียรติ ปีการศึกษา 2567</strong><br><span class="text-gray-600">รางวัลด้านวิชาการ ประเภทผลการเรียน ระดับดีเด่น</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/featured/honor-competition.jpg','วันเชิดชูเกียรติ ปีการศึกษา 2566 — รางวัลด้านวิชาการ ประเภทการแข่งขัน ระดับดีเด่น')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: วันเชิดชูเกียรติ ปีการศึกษา 2566">
+                                <img src="assets/featured/honor-competition.jpg" alt="วันเชิดชูเกียรติ ปีการศึกษา 2566" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. A4]</span>
+                                <strong>วันเชิดชูเกียรติ ปีการศึกษา 2566</strong><br><span class="text-gray-600">รางวัลด้านวิชาการ ประเภทการแข่งขัน ระดับดีเด่น</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- 4.2 กิจกรรมจิตอาสา -->
+                <div id="certificates-volunteer" class="space-y-2">
+                    <h3 class="font-bold text-base font-serif text-[#800000] flex items-center gap-2">
+                        <i class="fa-solid fa-hand-holding-heart text-sm"></i> 4.2 กิจกรรมจิตอาสา
+                        <span class="code-font text-xs font-normal text-gray-500">(Volunteer)</span>
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/volunteer/battalion.jpg','คณะกรรมการงานกองพันชมพูฟ้า — โรงเรียนหนองไผ่ ระยะเวลา 1 ปี (ส.ค. 2568 – ส.ค. 2569)')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: คณะกรรมการงานกองพันชมพูฟ้า">
+                                <img src="assets/volunteer/battalion.jpg" alt="คณะกรรมการงานกองพันชมพูฟ้า" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. B1]</span>
+                                <strong>คณะกรรมการงานกองพันชมพูฟ้า</strong><br><span class="text-gray-600">โรงเรียนหนองไผ่ ระยะเวลา 1 ปี (ส.ค. 2568 – ส.ค. 2569)</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/volunteer/rotc-election.jpg','รด.จิตอาสา สังเกตการณ์เลือกตั้ง — เลือกตั้งสมาชิกสภา อบต. และนายก อบต. (11 ม.ค. 2569)')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: รด.จิตอาสา สังเกตการณ์เลือกตั้ง">
+                                <img src="assets/volunteer/rotc-election.jpg" alt="รด.จิตอาสา สังเกตการณ์เลือกตั้ง" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. B2]</span>
+                                <strong>รด.จิตอาสา สังเกตการณ์เลือกตั้ง</strong><br><span class="text-gray-600">เลือกตั้งสมาชิกสภา อบต. และนายก อบต. (11 ม.ค. 2569)</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/volunteer/speaker.jpg','วิทยากรฐานนิทรรศการ Local AI — สัปดาห์วิทยาศาสตร์แห่งชาติ โรงเรียนหนองไผ่ (11 ส.ค. 2569)')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: วิทยากรฐานนิทรรศการ Local AI">
+                                <img src="assets/volunteer/speaker.jpg" alt="วิทยากรฐานนิทรรศการ Local AI" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. B3]</span>
+                                <strong>วิทยากรฐานนิทรรศการ Local AI</strong><br><span class="text-gray-600">สัปดาห์วิทยาศาสตร์แห่งชาติ โรงเรียนหนองไผ่ (11 ส.ค. 2569)</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- 4.3 การอบรมอื่นๆ -->
+                <div id="certificates-training" class="space-y-2">
+                    <h3 class="font-bold text-base font-serif text-[#800000] flex items-center gap-2">
+                        <i class="fa-solid fa-chalkboard-user text-sm"></i> 4.3 การอบรมอื่นๆ
+                        <span class="code-font text-xs font-normal text-gray-500">(Other Training)</span>
+                    </h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/training/ai-hacka.jpg','2nd Leagues of Code: AI &amp; Cyber Security Hackathon — Certificate of Participation, Team √T (1 มิ.ย. 2026)')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: 2nd Leagues of Code: AI &amp; Cyber Security Hackathon">
+                                <img src="assets/training/ai-hacka.jpg" alt="2nd Leagues of Code: AI &amp; Cyber Security Hackathon" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. C1]</span>
+                                <strong>2nd Leagues of Code: AI &amp; Cyber Security Hackathon</strong><br><span class="text-gray-600">Certificate of Participation, Team √T (1 มิ.ย. 2026)</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/training/depa.jpg','Coding Thailand 2026 (depa) — Regional Coding &amp; AI Competition ภาคเหนือตอนล่าง (15–17 มิ.ย. 2569)')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: Coding Thailand 2026 (depa)">
+                                <img src="assets/training/depa.jpg" alt="Coding Thailand 2026 (depa)" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. C2]</span>
+                                <strong>Coding Thailand 2026 (depa)</strong><br><span class="text-gray-600">Regional Coding &amp; AI Competition ภาคเหนือตอนล่าง (15–17 มิ.ย. 2569)</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/training/bm-hacka.jpg','Building Educational Games with LADDER — Orange Winter — เข้าร่วมอบรม ทีม อึ่งกองภูเขาใหญ่ไม่ภูเขาทอง')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: Building Educational Games with LADDER">
+                                <img src="assets/training/bm-hacka.jpg" alt="Building Educational Games with LADDER" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. C3]</span>
+                                <strong>Building Educational Games with LADDER</strong><br><span class="text-gray-600">Orange Winter — เข้าร่วมอบรม ทีม อึ่งกองภูเขาใหญ่ไม่ภูเขาทอง</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/training/microbit.jpg','STEAM micro:bit — อบรมเชิงปฏิบัติการ การเขียนโค้ดดิ้ง หุ่นยนต์ และไมโครบิท (19 ม.ค. 2569)')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: STEAM micro:bit">
+                                <img src="assets/training/microbit.jpg" alt="STEAM micro:bit" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. C4]</span>
+                                <strong>STEAM micro:bit</strong><br><span class="text-gray-600">อบรมเชิงปฏิบัติการ การเขียนโค้ดดิ้ง หุ่นยนต์ และไมโครบิท (19 ม.ค. 2569)</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/training/robot-sst.jpg','Robo Rescue with microROS — ทีม NP No Problem ประเภท Robo Rescue (6 มี.ค. 2569)')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: Robo Rescue with microROS">
+                                <img src="assets/training/robot-sst.jpg" alt="Robo Rescue with microROS" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. C5]</span>
+                                <strong>Robo Rescue with microROS</strong><br><span class="text-gray-600">ทีม NP No Problem ประเภท Robo Rescue (6 มี.ค. 2569)</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/training/portfolio-workshop.jpg','อบรม TCAS &amp; Portfolio — การคัดเลือกเข้าสถาบันอุดมศึกษาและเตรียม Portfolio 6 ชั่วโมง (31 ก.ค. 2569)')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: อบรม TCAS &amp; Portfolio">
+                                <img src="assets/training/portfolio-workshop.jpg" alt="อบรม TCAS &amp; Portfolio" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. C6]</span>
+                                <strong>อบรม TCAS &amp; Portfolio</strong><br><span class="text-gray-600">การคัดเลือกเข้าสถาบันอุดมศึกษาและเตรียม Portfolio 6 ชั่วโมง (31 ก.ค. 2569)</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="arxiv-box p-1.5 space-y-1">
+                            <button type="button" onclick="openLightbox('assets/training/techno-workshop.jpg','ส่งเสริมศักยภาพด้านวิทยาศาสตร์และเทคโนโลยีดิจิทัล — อบรมเชิงปฏิบัติการ โรงเรียนหนองไผ่ (31 ส.ค. 2568)')" class="block w-full overflow-hidden bg-gray-100 aspect-[4/3]" aria-label="ขยายรูป: ส่งเสริมศักยภาพด้านวิทยาศาสตร์และเทคโนโลยีดิจิทัล">
+                                <img src="assets/training/techno-workshop.jpg" alt="ส่งเสริมศักยภาพด้านวิทยาศาสตร์และเทคโนโลยีดิจิทัล" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                            </button>
+                            <figcaption class="text-[11px] leading-snug px-1 pb-1">
+                                <span class="code-font text-[#800000] font-semibold">[Cert. C7]</span>
+                                <strong>ส่งเสริมศักยภาพด้านวิทยาศาสตร์และเทคโนโลยีดิจิทัล</strong><br><span class="text-gray-600">อบรมเชิงปฏิบัติการ โรงเรียนหนองไผ่ (31 ส.ค. 2568)</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 5. Archives (ภาพกิจกรรม) -->
+            <article id="archives" class="space-y-3">
+                <h2 class="text-xl font-bold border-b-2 border-gray-800 pb-1 font-serif flex justify-between items-baseline">
+                    <span>5. Archives (ภาพกิจกรรม)</span>
+                    <span class="text-xs font-normal code-font text-gray-500">[Sec. 5.0]</span>
+                </h2>
+                <p class="section-note">
+                    ใส่รูปกิจกรรมโดยแทนที่ช่องว่างด้วย
+                    &lt;button onclick="openLightbox('รูป.jpg','คำอธิบาย')"&gt;&lt;img src="รูป.jpg"&gt;&lt;/button&gt; ซึ่งจะกดขยายดูได้
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <div class="slot-empty aspect-[4/3] text-xs code-font flex flex-col items-center justify-center gap-1">
+                        <i class="fa-regular fa-image text-xl"></i><span>[Fig. A1]</span>
+                    </div>
+                    <div class="slot-empty aspect-[4/3] text-xs code-font flex flex-col items-center justify-center gap-1">
+                        <i class="fa-regular fa-image text-xl"></i><span>[Fig. A2]</span>
+                    </div>
+                    <div class="slot-empty aspect-[4/3] text-xs code-font flex flex-col items-center justify-center gap-1">
+                        <i class="fa-regular fa-image text-xl"></i><span>[Fig. A3]</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 6. Education -->
+            <article id="education" class="space-y-3">
+                <h2 class="text-xl font-bold border-b-2 border-gray-800 pb-1 font-serif flex justify-between items-baseline">
+                    <span>6. Education</span>
+                    <span class="text-xs font-normal code-font text-gray-500">[Sec. 6.0]</span>
+                </h2>
+                <div class="arxiv-box p-4 text-sm space-y-2">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-gray-900">โรงเรียนหนองไผ่ (Nongphai School)</h3>
+                            <p class="text-xs code-font text-gray-600">ระดับชั้น / แผนการเรียน: [ใส่ข้อมูล]</p>
+                        </div>
+                        <span class="code-font text-xs text-gray-600">[ปี – ปัจจุบัน]</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ==================== RIGHT COLUMN ==================== -->
+        <aside class="lg:col-span-3 space-y-6 order-3 sticky-side">
+
+            <div class="arxiv-box p-3 text-center space-y-3">
+                <div class="text-xs code-font text-gray-500 border-b border-gray-200 pb-1 flex justify-between">
+                    <span>FIG 1.0: AUTHOR</span>
+                    <span class="text-[#800000]">● LIVE</span>
+                </div>
+                <div class="relative inline-block border-2 border-gray-800 p-1 bg-white shadow-sm max-w-[180px]">
+                    <img src="assets/profile.jpg"
+                         alt="Sarayut Angkoh"
+                         class="w-full h-auto object-cover"
+                         onerror="this.src='https://placehold.co/300x350/e0e0e0/333333?text=Profile+Photo'">
+                    <div class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] code-font px-1">[Fig.1]</div>
+                </div>
+                <div class="text-xs leading-tight space-y-1">
+                    <p class="font-bold text-gray-900">Sarayut Angkoh</p>
+                    <p class="text-gray-600 italic">Web Developer &amp; Student</p>
+                    <p class="code-font text-[11px] text-gray-500">Nongphai School</p>
+                </div>
+            </div>
+
+            <div class="arxiv-box p-3 text-xs space-y-2">
+                <h3 class="font-bold text-gray-800 border-b border-gray-300 pb-1 code-font uppercase">Quick Links</h3>
+                <ul class="space-y-1">
+                    <li><a href="#research" class="arxiv-link">โครงงาน: SproutS</a></li>
+                    <li><a href="#projects" class="arxiv-link">เว็ปที่พัฒนา (7)</a></li>
+                    <li><a href="#certificates" class="arxiv-link">เกียรติบัตร</a></li>
+                    <li><a href="#archives" class="arxiv-link">ภาพกิจกรรม</a></li>
+                </ul>
+            </div>
+
+            <div class="arxiv-box p-4 text-center bg-[#f7f6f2] space-y-2">
+                <h4 class="font-bold text-sm text-gray-900 code-font uppercase">Full Resume Download</h4>
+                <p class="text-xs text-gray-600">ใส่ลิงก์ไฟล์ PDF ที่ปุ่มด้านล่าง</p>
+                <a href="#" class="inline-block w-full bg-[#800000] hover:bg-red-900 text-white font-serif py-2 px-3 text-sm font-semibold transition-colors">
+                    <i class="fa-solid fa-file-pdf mr-1"></i> Download CV (PDF)
+                </a>
+            </div>
+
+            <div class="arxiv-box p-3 text-xs space-y-2 bg-[#fdfdfc]">
+                <h3 class="font-bold text-gray-800 border-b border-gray-300 pb-1 code-font uppercase">How to Cite This Work</h3>
+                <pre class="code-font text-[10px] bg-gray-100 p-2 overflow-x-auto border border-gray-300 leading-tight">@misc{angkoh2026portfolio,
+  author = {Angkoh, Sarayut},
+  title  = {Portfolio},
+  year   = {2026}
+}</pre>
+                <button onclick="toggleBibTeXModal('cite-author')" class="w-full arxiv-box py-1 text-center hover:bg-gray-100 code-font text-[11px] font-medium">
+                    <i class="fa-regular fa-copy"></i> Open Citation
+                </button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- ==================== FOOTER / CONTACT ==================== -->
+    <footer id="contact" class="mt-12 pt-6 border-t border-gray-400 text-center text-xs text-gray-600 space-y-2 pb-8">
+        <p class="font-semibold text-sm text-gray-800">§ 7. Contact</p>
+        <p class="code-font text-[11px]">
+            <a href="mailto:sarayutangkoh@gmail.com" class="arxiv-link">sarayutangkoh@gmail.com</a> &nbsp;|&nbsp;
+            <a href="https://github.com/tonkl7" target="_blank" rel="noopener" class="arxiv-link">github.com/tonkl7</a> &nbsp;|&nbsp;
+            <a href="https://www.kaggle.com/superbananaa" target="_blank" rel="noopener" class="arxiv-link">kaggle.com/superbananaa</a> &nbsp;|&nbsp;
+            <a href="https://huggingface.co/Tonkla2" target="_blank" rel="noopener" class="arxiv-link">huggingface.co/Tonkla2</a>
+        </p>
+        <p class="font-serif">
+            Designed in the spirit of classical open-access research archives
+            (<a href="https://arxiv.org" target="_blank" rel="noopener" class="arxiv-link">arXiv.org</a> layout aesthetic).
+        </p>
+        <p class="code-font text-[11px]">&copy; 2026 Sarayut Angkoh. All rights reserved.</p>
+    </footer>
+
+    <!-- ==================== BibTeX modal ==================== -->
+    <div id="bibtex-modal" class="fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50 hidden no-print">
+        <div class="bg-white arxiv-box max-w-lg w-full p-5 space-y-3 shadow-xl">
+            <div class="flex justify-between items-center border-b border-gray-300 pb-2">
+                <h3 class="font-bold text-sm code-font text-[#800000]">BibTeX Entry Citation</h3>
+                <button onclick="toggleBibTeXModal()" aria-label="Close" class="text-gray-500 hover:text-black font-bold text-lg">&times;</button>
+            </div>
+            <textarea id="bibtex-text" readonly class="w-full h-36 code-font text-xs p-2 bg-gray-50 border border-gray-300 focus:outline-none"></textarea>
+            <div class="flex justify-end gap-2 text-xs code-font">
+                <button onclick="copyModalBibTeX()" class="bg-[#800000] text-white px-4 py-1.5 hover:bg-red-900"><i class="fa-regular fa-copy"></i> Copy Snippet</button>
+                <button onclick="toggleBibTeXModal()" class="arxiv-box px-3 py-1.5 hover:bg-gray-100">Close</button>
+            </div>
+            <div id="modal-toast" class="text-xs text-green-700 code-font hidden text-right">✓ Copied to clipboard!</div>
+        </div>
+    </div>
+
+    <!-- ==================== Lightbox (Archives) ==================== -->
+    <div id="lightbox" class="fixed inset-0 bg-black/80 flex flex-col items-center justify-center p-4 z-50 hidden no-print" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="" class="max-h-[80vh] max-w-full border-4 border-white">
+        <p id="lightbox-caption" class="text-white text-xs code-font mt-3"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
